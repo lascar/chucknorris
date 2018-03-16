@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Consumer for https://api.chucknorris.io/
 
 * Ruby version
+ruby 2.4.1p111
 
 * System dependencies
+rails 5.1.5
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
+* Database
+sqlite
 
 * Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ChuckRequest use https://api.chucknorris.io/jokes
