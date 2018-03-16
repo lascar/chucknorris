@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chuck</h1>
+
+<div id="category">
+  <%= I18n.t("category") %> : <%= @chuck["category"] ? @chuck["category"][0] : "" %>
+</div>
+<div id="value">
+  <%= I18n.t("chuck_joke") %> : <%= @chuck["value"] %>
+</div>
+<br>
+<%= link_to I18n.t("back"), chucks_path(I18n.locale) %>

@@ -1,0 +1,2 @@
+class Chuck < ApplicationRecord
+end

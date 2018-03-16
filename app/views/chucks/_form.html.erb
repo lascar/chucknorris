@@ -1,0 +1,17 @@
+<%= form_with(model: chuck, local: true) do |form| %>
+  <% if chuck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chuck.errors.count, "error") %> prohibited this chuck from being saved:</h2>
+
+      <ul>
+      <% chuck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

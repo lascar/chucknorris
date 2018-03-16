@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  choose_category: "Choose the category"
+  search: "Search"
+  search_result: "Search Results"
+  back: "Back"  
+  category: "Category"
+  chuck_joke: "Chuck Joke"
+  text: "Text"
