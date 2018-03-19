@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= I18n.t("an_amazing_chuck_joke") %></h1>
+    <p>
+      <%= I18n.t("category") %> : <%= @chuck[:category]  %>
+    </p>
+    <p>
+      <%= I18n.t("chuck_joke") %> : <%= @chuck[:value]  %>
+    </p>
+  </body>
+</html>

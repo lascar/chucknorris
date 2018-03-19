@@ -1,7 +1,11 @@
-<h1>Search Chuck</h1>
-<%= form_tag(search_results_path(I18n.locale), method: "post") do -%>
-  <%= select_tag "category", options_for_select(@categories), prompt: I18n.t("choose_category") %>
-  <%= submit_tag I18n.t("search") %>
-<% end -%>
-<%= link_to I18n.t("back"), chucks_path(I18n.locale) %>
-<%= link_to I18n.t("search"), search_path(I18n.locale) %>
+<div id="search-box" class="well">
+  <%= form_tag(search_results_path(I18n.locale), method: "post") do -%>
+    <%= select_tag "category", options_for_select(@categories), prompt: I18n.t("choose_category"), class: "btn btn-secondary" %>
+    <%= submit_tag I18n.t("search"), class: "btn btn-primary" %>
+  <% end -%>
+</div>
+<div id="button-nav">
+  <%= link_to I18n.t("back"), chucks_path(I18n.locale), class: "btn btn-primary" %>
+  <%= link_to I18n.t("search"), search_path(I18n.locale), class: "btn btn-primary" %>
+  <%= link_to I18n.t("random"), random_path(I18n.locale), class: "btn btn-primary" %>
+</div>

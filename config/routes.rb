@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get '/chucks/random', to: 'chucks#random', as: 'random'
     get '/chucks/search', to: 'chucks#search', as: 'search'
     post '/chucks/search_results', to: 'chucks#search_results', as: 'search_results'
+    post '/chucks/send_chuck', to: 'chucks#send_chuck', as: 'send_chuck'
   end
 end

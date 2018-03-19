@@ -9,7 +9,7 @@ class ChucksController < ApplicationController
   # GET /chucks/random
   def random 
     chuck = ChuckRequest.new
-    @value = chuck.random_joke
+    @chuck = chuck.random_joke
   end
 
   # GET /chucks/search
@@ -26,4 +26,11 @@ class ChucksController < ApplicationController
     Chuck.create(chuck_id: @chuck['id'], category: @chuck['category'] ? @chuck['category'][0] : '', value: @chuck['value'])
   end
 
+  # POST /chucks/send_chuck
+  def send_chuck
+    email = params[:email]
+    chuck = {category: params[:category], value: params[:value]}
+    ChuckMailer.send_joke(email, chuck).deliver_later
+    redirect_to root_path
+  end
 end

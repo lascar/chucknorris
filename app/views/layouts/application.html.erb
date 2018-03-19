@@ -9,6 +9,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="main-container" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3">
+          <h3>Chucknorris</h3>
+        </div>
+        <div class="col-xs-9">
+					<p id="notice"><%= notice %></p>
+					<%= yield %>
+        </div>
+    </div>
   </body>
 </html>

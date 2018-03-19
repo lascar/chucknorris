@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Chuck</h1>
-
-<div id="category">
-  <%= I18n.t("category") %> : <%= @chuck["category"] ? @chuck["category"][0] : "" %>
-</div>
-<div id="value">
-  <%= I18n.t("chuck_joke") %> : <%= @chuck["value"] %>
+<div id="search-result" class="well">
+  <div id="category">
+    <%= I18n.t("category") %> : <%= @chuck["category"] ? @chuck["category"][0] : "" %>
+  </div>
+  <div id="value">
+    <%= I18n.t("chuck_joke") %> : <%= @chuck["value"] %>
+  </div>
 </div>
 <br>
-<%= link_to I18n.t("back"), chucks_path(I18n.locale) %>
+<%= link_to I18n.t("search"), search_path(I18n.locale), class: "btn btn-primary" %>
+<%= link_to I18n.t("random"), random_path(I18n.locale), class: "btn btn-primary" %>
+<%= link_to I18n.t("back"), chucks_path(I18n.locale), class: "btn btn-primary" %>
+
+

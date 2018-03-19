@@ -1,3 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<%= @value %> 
+<div id="random-box" class="well">
+  <div id="category">
+    <%= I18n.t("category") %> : <%= @chuck["category"] ? @chuck["category"][0] : "" %>
+  </div>
+  <div id="value">
+    <%= I18n.t("chuck_joke") %> : <%= @chuck["value"] %>
+  </div>
+</div>
+<div id="button-nav">
+  <%= link_to I18n.t("back"), chucks_path(I18n.locale), class: "btn btn-primary" %>
+  <%= link_to I18n.t("search"), search_path(I18n.locale), class: "btn btn-primary" %>
+</div>
+<div id="form-send">
+  <%= form_tag send_chuck_path(I18n.locale), method: "post", remote: true do%>
+    <%= text_field_tag :email %>
+    <%= hidden_field_tag :category, @chuck["category"] %>
+    <%= hidden_field_tag :value, @chuck["value"] %>
+    <%= submit_tag I18n.t("send_me_as_mail"), class: "btn btn-info" %>
+  <% end %>
+</div>

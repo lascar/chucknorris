@@ -3,7 +3,7 @@ class ChuckRequest
     url = 'https://api.chucknorris.io/jokes/random'
     response = RestClient::Request.execute(method: :get,url: url)
     json_response = JSON.parse(response)
-    return json_response['value']
+    return json_response
   end
 
   def categories

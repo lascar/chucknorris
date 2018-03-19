@@ -1,8 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Chucks</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th><%= I18n.t("category") %></th>
@@ -20,7 +16,12 @@
     <% end %>
   </tbody>
 </table>
-<%= paginate @chucks %>
-<%= link_to I18n.t("search"), search_path(I18n.locale) %>
+<div id="pagination" class="row">
+  <%= paginate @chucks %>
+</div>
+<div id="search" class="row">
+<%= link_to I18n.t("search"), search_path(I18n.locale), class: "btn btn-primary" %>
+<%= link_to I18n.t("random"), random_path(I18n.locale), class: "btn btn-primary" %>
+</div>
 
 <br>
