@@ -1,4 +1,4 @@
-server "ec2-35-162-185-87.us-west-2.compute.amazonaws.com", user: "deploy", roles: %w(web app db)
+server "ec2-35-164-171-220.us-west-2.compute.amazonaws.com", user: "deploy", roles: %w(web app db)
 # server-based syntax
 
 # ======================
