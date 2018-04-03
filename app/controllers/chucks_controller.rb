@@ -3,7 +3,7 @@ class ChucksController < ApplicationController
   # GET /chucks
   def index
     page = params[:page] || 1
-    @chucks = Chuck.page params[:page]
+    @chucks = Chuck.page page
   end
 
   # GET /chucks/random
@@ -23,7 +23,8 @@ class ChucksController < ApplicationController
     category = params[:category]
     chuck = ChuckRequest.new
     @chuck = chuck.search(category)
-    Chuck.create(chuck_id: @chuck['id'], category: @chuck['category'] ? @chuck['category'][0] : '', value: @chuck['value'])
+    category = @chuck['category']
+    Chuck.create(chuck_id: @chuck['id'], category: category ? category[0] : '', value: @chuck['value'])
   end
 
   # POST /chucks/send_chuck
