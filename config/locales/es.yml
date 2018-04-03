@@ -9,3 +9,9 @@ es:
   random: "Broma Random"
   an_amazing_chuck_joke: "Una estupenda Chuck Broma"
   send_me_as_mail: "Envia me a este correo" 
+  views:
+    pagination:
+      first: "Primera"
+      last: "Última"
+      previous: "Anterior"
+      next: "Siguiente"

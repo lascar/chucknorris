@@ -1,0 +1,7 @@
+<% 1.upto(10) do |i| %>
+chuck_<%= i %>:
+  id: <%= i %>
+  chuck_id: "<%= [' ', *('a'..'z'), *('0'..'9')].shuffle[0,21].join%>"
+  value: "<%= ('a'..'z').to_a.shuffle[0,40].join %>"
+  category: "<%= "category_" + i.to_s %>"
+<% end %>

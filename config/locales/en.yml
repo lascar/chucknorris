@@ -40,3 +40,9 @@ en:
   random: "Random Joke"
   an_amazing_chuck_joke: "An amazing Chuck Joke"
   send_me_as_mail: "Send me it to this email" 
+  views:
+    pagination:
+      first: "First"
+      last: "Last"
+      previous: "Previous"
+      next: "Next"
