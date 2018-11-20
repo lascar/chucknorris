@@ -5,10 +5,10 @@ semaphore build at http://ec2-35-164-171-220.us-west-2.compute.amazonaws.com/
 Consumer for https://api.chucknorris.io/
 
 * Ruby version
-ruby 2.4.1p111
+ruby 2.5.3
 
 * System dependencies
-rails 5.1.5
+rails 5.2.1
 
 * Database
 sqlite
