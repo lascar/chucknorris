@@ -8,23 +8,18 @@ class ChucksController < ApplicationController
 
   # GET /chucks/random
   def random 
-    chuck = ChuckRequest.new
-    @chuck = chuck.random_joke
+    @chuck = RandomChuck.call
   end
 
   # GET /chucks/search
   def search
-    chuck = ChuckRequest.new
-    @categories = chuck.categories
+    @categories = CategoriesChuck.call
   end
 
   # POST /chucks/search_results
   def search_results
-    category = params[:category]
-    chuck = ChuckRequest.new
-    @chuck = chuck.search(category)
-    category = @chuck['category']
-    Chuck.create(chuck_id: @chuck['id'], category: category ? category[0] : '', value: @chuck['value'])
+    @chuck = SearchChuck.call(params[:category])
+    SaveChuck.call(@chuck)
   end
 
   # POST /chucks/send_chuck
